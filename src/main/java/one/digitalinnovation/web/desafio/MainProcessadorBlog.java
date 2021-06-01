@@ -25,7 +25,7 @@ public class MainProcessadorBlog {
                     .toLowerCase();
 
             if (value.equals(".\n")) {
-                System.out.printf("%n[?] = = = FINAL DE PROCESSAMENTO DO BLOG.%n", br.readLine());
+                System.out.printf("%n[?] = = = FINAL DE PROCESSAMENTO DO BLOG.  = = = %n", br.readLine());
                 break;
             }
 
