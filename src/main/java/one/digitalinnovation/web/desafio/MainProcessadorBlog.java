@@ -16,8 +16,6 @@ public class MainProcessadorBlog {
         StringTokenizer st = new StringTokenizer(br.readLine(), "\n");
         StringBuilder frase = new StringBuilder("");
 
-        System.out.printf("[?] BufferedReader br: [%s].%n", br.readLine());
-
         while (st.hasMoreElements()) {
 
             String value = st.nextToken()
@@ -25,7 +23,6 @@ public class MainProcessadorBlog {
                     .toLowerCase();
 
             if (value.equals(".\n")) {
-                System.out.printf("%n[?] = = = FINAL DE PROCESSAMENTO DO BLOG.  = = = %n", br.readLine());
                 break;
             }
 
@@ -35,7 +32,6 @@ public class MainProcessadorBlog {
                     .replaceAll("\n", " ")
                     .replaceAll("\t", " ");
 
-            System.out.printf("[?] Token: [%s].%n", value);
             frase.append(value).append(" ");
         }
 
@@ -44,15 +40,11 @@ public class MainProcessadorBlog {
     }
 
     static private void processador(String frase) {
-        System.out.printf("[?] Inicio do processamento: [%s].%n", frase);
-
         List<String> alfabeto = new ArrayList(Arrays.asList("abcdefghijklmnopqrstuvwxyz".split("")));
         List<String> palavrasEncontradas = new ArrayList(Arrays.asList(frase.split(" ")));
-        System.out.printf("[?] Quantidade de palavras na frase: %d%n", palavrasEncontradas.size());
 
         Map<String, String> dicionario = new HashMap<String, String>();
         alfabeto.stream().forEach(letra -> dicionario.put(letra, ""));
-        System.out.printf("[?] Dicionario possui %d chaves.%n", dicionario.size());
 
         Map<String, Map<String, Integer>> repeticaoPalavra = new HashMap<String, Map<String, Integer>>();
         alfabeto.stream().forEach(letra -> repeticaoPalavra.put(letra, new HashMap<String, Integer>()));
@@ -75,12 +67,10 @@ public class MainProcessadorBlog {
                 Integer value = palavraChaveComQuantidade.get(palavra);
                 if (null != value) {
                     palavraChaveComQuantidade.put(palavra, 1 + Integer.valueOf(value).intValue());
-                    System.out.printf("[?] Palavra chave e quantidade [%s]-[%d].%n", palavra, palavraChaveComQuantidade.get(palavra));
                 }
             }
         });
 
-        System.out.printf("[?] %n");
         alfabeto.stream().forEach(letra -> {
             Map<String, Integer> map = repeticaoPalavra.get(letra);
             List<String> chaves = new ArrayList<String>(map.keySet());
@@ -122,7 +112,6 @@ public class MainProcessadorBlog {
     }
 
     private static void resultado(List<String> alfabeto, Map<String, String> dicionario, String fraseAbreviada) {
-        System.out.println("[?] Resultado do processamento:");
         System.out.println(fraseAbreviada);
 
         int quantidadeAbreviacoes = 0;
