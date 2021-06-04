@@ -13,7 +13,7 @@ public class MainProcessadorBlog {
         System.out.println();
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in, "UTF-8"));
-        StringTokenizer st = new StringTokenizer(br.readLine());
+        StringTokenizer st = new StringTokenizer(br.readLine(), "\n");
         StringBuilder frase = new StringBuilder("");
 
         System.out.printf("[?] BufferedReader br: [%s].%n", br.readLine());
