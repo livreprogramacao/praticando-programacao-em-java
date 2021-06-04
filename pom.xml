@@ -20,7 +20,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>one.digitalinnovation.web.desafio.MainProcessadorBlog</mainClass>
+                            <mainClass>one.digitalinnovation.web.desafio.Desafio1AbreviacaoPostsBlog</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
