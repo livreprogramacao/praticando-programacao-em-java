@@ -1,5 +1,3 @@
-package one.digitalinnovation.web.desafio.praticandoprogramacaoemjava;
-
 /**
  * Abreviando Posts do Blog
  * <p>
@@ -43,6 +41,8 @@ package one.digitalinnovation.web.desafio.praticandoprogramacaoemjava;
  * abreviação no texto. Nas próximas N linhas, imprima o seguinte padrão “C. = P”, onde C é a letra inicial e P
  * é a palavra escolhida para tal letra. As linhas devem ser impressas em ordem crescente da letra inicial.
  */
+
+package one.digitalinnovation.web.desafio.praticandoprogramacaoemjava;
 
 import java.io.BufferedReader;
 import java.io.IOException;
