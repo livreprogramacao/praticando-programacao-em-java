@@ -20,27 +20,27 @@
 
 import java.util.Scanner;
 
-public class MaiorSubstring {
+public class EncontreAMaiorSubstring {
     public static void main(String[] args) {
         Scanner scr = new Scanner(System.in);
-        String palavra1;
-        String palavra2;
+        String primeira;
+        String segunda;
 
         while (scr.hasNextLine()) {
-            palavra1 = scr.nextLine();
-            palavra2 = scr.nextLine();
+            primeira = scr.nextLine();
+            segunda = scr.nextLine();
             int tamanhoMax = 0;
 
-            if (palavra2.length() > palavra1.length()) {
-                String maiorPalavra = palavra2;
-                palavra2 = palavra1;
-                palavra1 = maiorPalavra;
+            if (segunda.length() > primeira.length()) {
+                String maiorPalavra = segunda;
+                segunda = primeira;
+                primeira = maiorPalavra;
             }
 
-            for (int i = 0; i < palavra2.length(); i++) {
+            for (int i = 0; i < segunda.length(); i++) {
                 for (int j = 0; j < i + 1; j++) {
-                    if (palavra1.contains(palavra2.substring(j, palavra2.length() - i + j))) {
-                        tamanhoMax = Math.max(tamanhoMax, palavra2.length() - i);
+                    if (primeira.contains(segunda.substring(j, segunda.length() - i + j))) {
+                        tamanhoMax = Math.max(tamanhoMax, segunda.length() - i);
                     }
                 }
             }
