@@ -23,14 +23,13 @@ import java.io.InputStreamReader;
 
 public class AnaliseNumeros {
     public static void main(String[] args) throws IOException {
-        String linha;
         int Pos, Neg, Par, Impar, num;
 
         Pos = Neg = Par = Impar = 0;
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         for (int i = 0; i < 5; i++) {
-            linha = br.readLine();
+            final String linha = br.readLine();
             num = Integer.parseInt(linha);
 
             if (num % 2 == 0) {

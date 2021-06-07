@@ -24,12 +24,14 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class ContagemRepetidaNumeros {
+
     public static void main(String[] args) {
+
         Scanner scr = new Scanner(System.in);
-        int valores = scr.nextInt();
+        final int dados = scr.nextInt();
         Map<Integer, Integer> numeros = new HashMap<>();
 
-        for (int i = 0; i < valores; i++) {
+        for (int i = 0; i < dados; i++) {
             var numero = scr.nextInt();
 
             if (numeros.containsKey(numero)) {
@@ -45,4 +47,5 @@ public class ContagemRepetidaNumeros {
                 .sorted(Map.Entry.comparingByKey())
                 .forEach(e -> System.out.println(e.getKey() + " aparece " + e.getValue() + " vez(es)"));
     }
+
 }
